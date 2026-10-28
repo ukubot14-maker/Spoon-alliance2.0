@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Spoon Alliance</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">A VERY SHINY ADVENTURE</p>
+        <h1>🥄 The Spoon Alliance</h1>
+      </div>
+      <div class="stats">
+        <span>Alliance <b id="spoonCount">0</b></span>
+        <span>HP <b id="health">100</b></span>
+        <span>Bosses <b id="bossCount">0/3</b></span>
+      </div>
+    </header>
+
+    <section class="game-layout">
+      <div class="canvas-wrap">
+        <canvas id="game" width="960" height="600" aria-label="The Spoon Alliance game"></canvas>
+        <div id="overlay" class="overlay">
+          <div class="panel">
+            <div class="big-icon">🥄⚔️🥄</div>
+            <p class="eyebrow">YOUR QUEST BEGINS</p>
+            <h2 id="overlayTitle">Build the Spoon Alliance</h2>
+            <p id="overlayText">Explore the meadow, find lost spoons, recruit them, and take down the terrible kitchen bosses.</p>
+            <button id="startBtn">Start the adventure</button>
+          </div>
+        </div>
+      </div>
+      <aside class="side-panel">
+        <section class="mission-card">
+          <p class="eyebrow">CURRENT MISSION</p>
+          <h2 id="missionTitle">Find your first spoon</h2>
+          <p id="missionText">Walk up to a wandering spoon to recruit it. Every ally makes your attacks stronger.</p>
+          <div class="progress"><div id="progressBar"></div></div>
+        </section>
+        <section class="guide-card">
+          <p class="eyebrow">HOW TO PLAY</p>
+          <div class="control"><kbd>W A S D</kbd><span>Move around</span></div>
+          <div class="control"><kbd>↑ ↓ ← →</kbd><span>Or use arrow keys</span></div>
+          <div class="control"><kbd>SPACE</kbd><span>Whack nearby enemies</span></div>
+          <div class="control"><kbd>E</kbd><span>Recruit nearby spoons</span></div>
+          <div class="control"><kbd>R</kbd><span>Restart after a run</span></div>
+        </section>
+        <section class="log-card">
+          <p class="eyebrow">ALLIANCE LOG</p>
+          <div id="log"><p>The meadow is quiet... suspiciously quiet.</p></div>
+        </section>
+      </aside>
+    </section>
+    <footer>Made for brave spoons everywhere. <span>Tip: get close before pressing E!</span></footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
